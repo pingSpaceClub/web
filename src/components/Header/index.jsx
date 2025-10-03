@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import './styles.scss'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +18,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <h1>App</h1>
+            <h1><Link to="/">App</Link></h1>
           </div>
           <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
             <li className="nav-item">

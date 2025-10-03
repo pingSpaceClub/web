@@ -1,0 +1,27 @@
+@use './variables' as *;
+
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+@mixin button-base {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all $transition-base;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@mixin section-padding {
+  padding: $section-padding 0;
+  
+  @media screen and (max-width: $mobile) {
+    padding: $section-padding-mobile 0;
+  }
+}
