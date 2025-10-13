@@ -6,7 +6,7 @@ import Terms from './pages/Terms'
 
 function App() {
   return (
-    <Router basename="/ping-space-web">
+    <Router basename="/web">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
