@@ -82,7 +82,7 @@ The project includes GitHub Actions for automatic deployment:
 
 1. Push code to your GitHub repository
 2. GitHub Actions automatically builds and deploys
-3. Your site is available at `https://Verenkiotov.github.io/ping-space-web`
+3. Your site is available at `https://pingspaceclub.github.io/web/`
 
 ### Manual Deployment
 
