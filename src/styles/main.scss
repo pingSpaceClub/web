@@ -4,260 +4,276 @@
 
 // Hero Section
 .hero {
-  background: linear-gradient(135deg, $dark-bg 0%, $dark-bg-secondary 50%, $dark-bg-tertiary 100%);
-  color: $white;
-  padding: 120px 0 80px;
-  text-align: center;
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    
-    @media screen and (max-width: $tablet) {
-      font-size: 2rem;
+    background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
+    color: #131314;
+    padding: 120px 0 80px;
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
     }
-  }
-  
-  @media screen and (max-width: $mobile) {
-    padding: 100px 0 60px;
-  }
+
+    @media screen and (max-width: $mobile) {
+        padding: 100px 0 60px;
+    }
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.9;
-  
-  @media screen and (max-width: $tablet) {
-    font-size: 1rem;
-  }
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 1rem;
+    }
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  
-  @media screen and (max-width: $tablet) {
-    flex-direction: column;
-    align-items: center;
-  }
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 // Buttons
 .btn {
-  @include button-base;
-  
-  &-primary {
-    background-color: $primary-color;
-    color: $white;
-    
-    &:hover {
-      background-color: $primary-dark;
-      transform: translateY(-2px);
+    @include button-base;
+
+    &-primary {
+        background-color: #131314;
+        color: $white;
+
+        &:hover {
+            background-color: #131314;
+            transform: translateY(-2px);
+        }
     }
-  }
-  
-  &-secondary {
-    background-color: transparent;
-    color: $white;
-    border: 2px solid $white;
-    
-    &:hover {
-      background-color: $white;
-      color: $dark-bg;
+
+    &-secondary {
+        background-color: transparent;
+        color: #131314;
+        border: 2px solid #131314;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
     }
-  }
 }
 
 // Features Section
 .features {
-  @include section-padding;
-  background-color: $light-bg;
-  
-  h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: $dark-bg;
-    
-    @media screen and (max-width: $tablet) {
-      font-size: 2rem;
+    @include section-padding;
+    background-color: $light-bg;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: $dark-bg;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
     }
-  }
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  
-  @media screen and (max-width: $mobile) {
-    grid-template-columns: 1fr;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .feature-card {
-  background: $white;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px $shadow-light;
-  transition: transform $transition-base;
-  
-  &:hover {
-    transform: translateY(-5px);
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: $dark-bg;
-  }
-  
-  p {
-    color: $text-light;
-    line-height: $line-height-base;
-  }
-  
-  @media screen and (max-width: $mobile) {
-    padding: 1.5rem;
-  }
+    background: $white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px $shadow-light;
+    transition: transform $transition-base;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: $dark-bg;
+    }
+
+    p {
+        color: $text-light;
+        line-height: $line-height-base;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 1.5rem;
+    }
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 // Contact Section
 .contact {
-  @include section-padding;
-  background-color: $white;
-  
-  h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: $dark-bg;
-    
-    @media screen and (max-width: $tablet) {
-      font-size: 2rem;
+    @include section-padding;
+    background-color: $white;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: $dark-bg;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
     }
-  }
 }
 
 .contact-description {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-  color: $text-light;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: $text-light;
 }
 
 .contact-info-center {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .contact-item {
-  margin-bottom: 1.5rem;
-  
-  strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: $dark-bg;
-  }
-  
-  p {
-    color: $text-light;
-  }
-  
-  a {
-    color: $primary-color;
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
+    margin-bottom: 1.5rem;
+
+    strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $dark-bg;
     }
-  }
+
+    p {
+        color: $text-light;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 // Page-specific styles for Privacy and Terms pages
+
+.page-container {
+    background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
+}
+
 .page-header {
-  background: linear-gradient(135deg, $dark-bg 0%, $dark-bg-secondary 100%);
-  color: $white;
-  padding: 120px 0 60px;
-  text-align: center;
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
+    color: #131314;
+    padding: 120px 0 60px;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+}
+
+.content-wrap {
+    background: $white;
+    border-radius: 32px 32px 0 0;
 }
 
 .page-content {
-  padding: 60px 0;
-  max-width: 800px;
-  margin: 0 auto;
-  
-  h2 {
-    color: $dark-bg;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    color: $dark-bg;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    color: #555;
-  }
-  
-  ul,
-  ol {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-  }
-  
-  li {
-    margin-bottom: 0.5rem;
-    line-height: $line-height-base;
-    color: #555;
-  }
-  
-  a {
-    color: $primary-color;
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &.faq-page {
+        min-height: 500px;
     }
-  }
+
+    h2 {
+        color: $dark-bg;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        color: $dark-bg;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    ul,
+    ol {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+        line-height: $line-height-base;
+        color: #555;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    details {
+        min-height: 70px;
+    }
 }
 
 .last-updated {
-  background-color: $light-bg;
-  padding: 1rem;
-  border-radius: 5px;
-  margin-bottom: 2rem;
-  font-style: italic;
-  color: $text-light;
+    background-color: $light-bg;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: $text-light;
 }

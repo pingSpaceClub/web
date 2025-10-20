@@ -65,10 +65,11 @@ npm run deploy   # Build and deploy to GitHub Pages
 React Router provides clean URL routing:
 
 - `/` - Home page
-- `/privacy` - Privacy Policy  
+- `/privacy` - Privacy Policy
 - `/terms` - Terms of Service
 
 All routes work with:
+
 - Direct URL access
 - Page refreshes
 - Back/forward navigation

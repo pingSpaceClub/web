@@ -3,107 +3,123 @@
 
 // Navigation
 .navbar {
-  background-color: $dark-bg;
-  padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 10px $shadow-light;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav-container {
-  @include container;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-logo {
-  h1 {
-    color: $white;
-    font-size: 1.5rem;
-    font-weight: 700;
+    h1 {
+        color: #131314;
+        font-size: 1.5rem;
+        font-weight: 700;
 
-    a {
-      color: $white;
-      text-decoration: none;
-      
-      &:hover {
-        color: $white;
-      }
+        a {
+            color: #131314;
+            text-decoration: none;
+
+            &:hover {
+                color: #131314;
+            }
+        }
     }
-  }
 }
 
 .nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  
-  @media screen and (max-width: $tablet) {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: $dark-bg;
-    width: 100%;
-    text-align: center;
-    transition: $transition-base;
-    box-shadow: 0 10px 27px $shadow-medium;
-    padding: 2rem 0;
-    
-    &.active {
-      left: 0;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    @media screen and (max-width: $tablet) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: -100%;
+        flex-direction: column;
+        background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
+        width: 100%;
+        text-align: center;
+        transition: $transition-base;
+        box-shadow: 0 10px 27px $shadow-medium;
+        padding: 2rem 0;
+
+        &.active {
+            top: 0;
+        }
+
+        li {
+            margin: 1rem 0;
+        }
     }
-    
-    li {
-      margin: 1rem 0;
-    }
-  }
 }
 
 .nav-link {
-  color: $white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color $transition-base;
-  padding: 0.5rem 0;
-  
-  &:hover,
-  &.active {
-    color: $primary-color;
-  }
+    color: #131314;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-base;
+    padding: 0.5rem 0;
+    position: relative;
+
+    &:hover {
+        color: #131314;
+        opacity: 0.8;
+    }
+
+    &.active {
+        color: #131314;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: #131314;
+            width: 70%;
+            height: 2px;
+            bottom: 0px;
+            left: 15%;
+        }
+    }
 }
 
 .nav-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  
-  @media screen and (max-width: $tablet) {
-    display: flex;
-  }
-  
-  &.is-active {
-    .bar:nth-child(2) {
-      opacity: 0;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    @media screen and (max-width: $tablet) {
+        display: flex;
     }
-    
-    .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+
+    &.is-active {
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
     }
-    
-    .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-  }
 }
 
 .bar {
-  width: 25px;
-  height: 3px;
-  background-color: $white;
-  margin: 3px 0;
-  transition: $transition-base;
+    width: 25px;
+    height: 3px;
+    background-color: #131314;
+    margin: 3px 0;
+    transition: $transition-base;
 }
