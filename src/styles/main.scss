@@ -2,210 +2,34 @@
 @use './mixins' as *;
 @use './variables' as *;
 
-// Hero Section
-.hero {
-    background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
-    color: #131314;
-    padding: 120px 0 80px;
-    text-align: center;
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-
-        @media screen and (max-width: $tablet) {
-            font-size: 2rem;
-        }
-    }
-
-    @media screen and (max-width: $mobile) {
-        padding: 100px 0 60px;
-    }
-}
-
-.hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.9;
-
-    @media screen and (max-width: $tablet) {
-        font-size: 1rem;
-    }
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    @media screen and (max-width: $tablet) {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-// Buttons
-.btn {
-    @include button-base;
-
-    &-primary {
-        background-color: #131314;
-        color: $white;
-
-        &:hover {
-            background-color: #131314;
-            transform: translateY(-2px);
-        }
-    }
-
-    &-secondary {
-        background-color: transparent;
-        color: #131314;
-        border: 2px solid #131314;
-
-        &:hover {
-            transform: translateY(-2px);
-        }
-    }
-}
-
-// Features Section
-.features {
-    @include section-padding;
-    background-color: $light-bg;
-
-    h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
-        color: $dark-bg;
-
-        @media screen and (max-width: $tablet) {
-            font-size: 2rem;
-        }
-    }
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-
-    @media screen and (max-width: $mobile) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.feature-card {
-    background: $white;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px $shadow-light;
-    transition: transform $transition-base;
-
-    &:hover {
-        transform: translateY(-5px);
-    }
-
-    h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: $dark-bg;
-    }
-
-    p {
-        color: $text-light;
-        line-height: $line-height-base;
-    }
-
-    @media screen and (max-width: $mobile) {
-        padding: 1.5rem;
-    }
-}
-
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-// Contact Section
-.contact {
-    @include section-padding;
-    background-color: $white;
-
-    h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: $dark-bg;
-
-        @media screen and (max-width: $tablet) {
-            font-size: 2rem;
-        }
-    }
-}
-
-.contact-description {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    color: $text-light;
-}
-
-.contact-info-center {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-item {
-    margin-bottom: 1.5rem;
-
-    strong {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: $dark-bg;
-    }
-
-    p {
-        color: $text-light;
-    }
-
-    a {
-        color: $primary-color;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
 // Page-specific styles for Privacy and Terms pages
-
 .page-container {
     background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
 }
 
 .page-header {
-    color: #131314;
     padding: 120px 0 60px;
     text-align: center;
 
+    @media screen and (max-width: $mobile) {
+        padding: 80px 0 24px;
+    }
+
     h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: $font-size-xxl;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $font-size-xl;
+        }
     }
 
     p {
-        font-size: 1.1rem;
+        font-size: $font-size-lg;
         opacity: 0.9;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $font-size-base;
+        }
     }
 }
 
@@ -218,28 +42,34 @@
     padding: 60px 0;
     max-width: 800px;
     margin: 0 auto;
+    font-size: $font-size-base;
 
-    &.faq-page {
-        min-height: 500px;
+    @media screen and (max-width: $tablet) {
+        padding: 40px 0;
+        font-size: $font-size-sm;
     }
 
     h2 {
-        color: $dark-bg;
         margin-top: 2rem;
         margin-bottom: 1rem;
-        font-size: 1.5rem;
+        font-size: $font-size-xl;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $font-size-lg;
+        }
     }
 
     h3 {
-        color: $dark-bg;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        font-size: $font-size-lg;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $font-size-base;
+        }
     }
 
     p {
-        margin-bottom: 1rem;
-        line-height: 1.7;
         color: #555;
     }
 
@@ -262,10 +92,6 @@
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    details {
-        min-height: 70px;
     }
 }
 

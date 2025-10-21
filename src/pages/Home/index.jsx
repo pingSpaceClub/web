@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+import './styles.scss';
 
 const Home = () => {
     useEffect(() => {

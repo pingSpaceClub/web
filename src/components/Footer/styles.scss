@@ -2,10 +2,10 @@
 @use '../../styles/mixins' as *;
 
 .footer {
-    background-color: #131314;
+    background-color: $black;
     color: #fff;
     padding: 2rem 0;
-    font-size: 1rem;
+    font-size: $font-size-sm;
 
     .container {
         max-width: 1200px;
@@ -59,7 +59,6 @@
         border-top: 1px solid #333;
         padding-top: 1rem;
         text-align: center;
-        font-size: 0.95rem;
         color: #aaa;
     }
 }

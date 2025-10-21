@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Link, NavLink} from 'react-router-dom';
-import './styles.scss';
 import { routes } from '../../constants/routes';
+import './styles.scss';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

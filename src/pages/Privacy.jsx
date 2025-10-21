@@ -16,9 +16,9 @@ const Privacy = () => {
             <section className='content-wrap'>
                 <div className='page-content'>
                     <div className='container'>
-                        <div className='last-updated'>
-                            <strong>Last Updated:</strong> October 2, 2024
-                        </div>
+                        <p className='last-updated'>
+                            Останнє оновлення: жовтень 2025 р.
+                        </p>
 
                         <h2>1. Information We Collect</h2>
                         <p>

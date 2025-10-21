@@ -1,0 +1,182 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+// Hero Section
+.hero {
+    background: linear-gradient(90deg, #9ef89a 0%, #cffe62 100%);
+    padding: 150px 0 110px;
+    text-align: center;
+
+    @media screen and (max-width: $mobile) {
+        padding: 100px 0 60px;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 1rem;
+        font-weight: 700;
+
+        @media screen and (max-width: $tablet) {
+            font-size: $font-size-xxl;
+        }
+    }
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+
+    @media screen and (max-width: $tablet) {
+        font-size: 1rem;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// Buttons
+.btn {
+    @include button-base;
+
+    &-primary {
+        background-color: $black;
+        color: $white;
+
+        &:hover {
+            background-color: $black;
+            transform: translateY(-2px);
+        }
+    }
+
+    &-secondary {
+        background-color: transparent;
+        color: $black;
+        border: 2px solid $black;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Features Section
+.features {
+    @include section-padding;
+    background-color: $light-bg;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-card {
+    background: $white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px $shadow-light;
+    transition: transform $transition-base;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $text-light;
+        line-height: $line-height-base;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 1.5rem;
+    }
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+// Contact Section
+.contact {
+    @include section-padding;
+    background-color: $white;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.contact-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: $text-light;
+}
+
+.contact-info-center {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+
+    strong {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        color: $text-light;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

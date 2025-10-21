@@ -21,16 +21,15 @@
 
 .nav-logo {
     h1 {
-        color: #131314;
-        font-size: 1.5rem;
+        font-size: $font-size-xl;
         font-weight: 700;
 
         a {
-            color: #131314;
+            color: $black;
             text-decoration: none;
 
             &:hover {
-                color: #131314;
+                color: $black;
             }
         }
     }
@@ -65,7 +64,7 @@
 }
 
 .nav-link {
-    color: #131314;
+    color: $black;
     text-decoration: none;
     font-weight: 500;
     transition: color $transition-base;
@@ -73,17 +72,17 @@
     position: relative;
 
     &:hover {
-        color: #131314;
+        color: $black;
         opacity: 0.8;
     }
 
     &.active {
-        color: #131314;
+        color: $black;
 
         &::after {
             content: '';
             position: absolute;
-            background-color: #131314;
+            background-color: $black;
             width: 70%;
             height: 2px;
             bottom: 0px;
@@ -119,7 +118,7 @@
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #131314;
+    background-color: $black;
     margin: 3px 0;
     transition: $transition-base;
 }

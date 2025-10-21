@@ -1,0 +1,115 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.faq-page {
+    min-height: 80vh;
+
+    &__header {
+        padding: 80px 0 24px;
+        text-align: center;
+
+        @media screen and (max-width: $mobile) {
+            padding: 80px 0 24px;
+        }
+
+        h1 {
+            font-size: $font-size-xl;
+
+            @media screen and (max-width: $tablet) {
+                font-size: $font-size-lg;
+            }
+        }
+
+        p {
+            font-size: $font-size-lg;
+            opacity: 0.9;
+
+            @media screen and (max-width: $tablet) {
+                font-size: $font-size-base;
+            }
+        }
+    }
+
+    .faq-page__content {
+        padding: 0;
+    }
+}
+
+.faq-item {
+    padding: 12px 24px;
+    margin-bottom: 10px;
+    border-radius: 16px 16px 16px 0;
+    background: #E9E9E9;
+    overflow: hidden;
+    transition: all $transition-base;
+
+    &[open] {
+        .chevron {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: $font-size-base;
+    font-weight: 700;
+    color: $black;
+    list-style: none;
+    user-select: none;
+
+    @media screen and (max-width: $mobile) {
+        font-size: $font-size-sm;
+    }
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::marker {
+        display: none;
+    }
+
+    span:first-child {
+        flex: 1;
+        padding-right: 16px;
+    }
+
+    .chevron {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        transition: transform $transition-base;
+        flex-shrink: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid $black;
+            border-bottom: 2px solid $black;
+            transform: translate(-50%, -70%) rotate(45deg);
+        }
+    }
+}
+
+.faq-answer {
+    padding: 0 24px;
+    color: rgba($black, 0.8);
+    line-height: 1.6;
+
+    p {
+        margin: 0;
+        font-size: $font-size-sm;
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 0 20px 20px;
+    }
+}
