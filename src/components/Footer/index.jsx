@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import './styles.scss';
+import { routes } from '../../constants/routes';
 
 const Footer = () => {
     return (
@@ -14,10 +15,10 @@ const Footer = () => {
                         <h4>Legal</h4>
                         <ul>
                             <li>
-                                <Link to='/privacy'>Privacy Policy</Link>
+                                <Link to={routes.privacy}>Privacy Policy</Link>
                             </li>
                             <li>
-                                <Link to='/terms'>Terms of Service</Link>
+                                <Link to={routes.terms}>Terms of Service</Link>
                             </li>
                         </ul>
                     </div>

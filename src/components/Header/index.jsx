@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import './styles.scss';
+import { routes } from '../../constants/routes';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,13 +20,13 @@ const Header = () => {
                 <div className='nav-container'>
                     <div className='nav-logo'>
                         <h1>
-                            <Link to='/'>PingSpace</Link>
+                            <Link to={routes.home}>PingSpace</Link>
                         </h1>
                     </div>
                     <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                         <li className='nav-item'>
                             <NavLink
-                                to='/privacy'
+                                to={routes.privacy}
                                 className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}
                                 onClick={closeMenu}
                             >
@@ -34,7 +35,7 @@ const Header = () => {
                         </li>
                         <li className='nav-item'>
                             <NavLink
-                                to='/terms'
+                                to={routes.terms}
                                 className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}
                                 onClick={closeMenu}
                             >
@@ -43,7 +44,7 @@ const Header = () => {
                         </li>
                         <li className='nav-item'>
                             <NavLink
-                                to='/FAQ'
+                                to={routes.faq}
                                 className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}
                                 onClick={closeMenu}
                             >

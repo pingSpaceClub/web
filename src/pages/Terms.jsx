@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {routes} from '../constants/routes';
 
 const Terms = () => {
     useEffect(() => {
@@ -107,7 +108,7 @@ const Terms = () => {
                         <h2>6. Privacy</h2>
                         <p>
                             Your privacy is important to us. Please review our{' '}
-                            <Link to='/privacy'>Privacy Policy</Link>, which explains how we
+                            <Link to={routes.privacy}>Privacy Policy</Link>, which explains how we
                             collect, use, and protect your information when you use the App.
                         </p>
 
