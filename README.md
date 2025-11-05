@@ -54,7 +54,7 @@ npm run dev
 
 ```bash
 npm run dev      # Start development server with HMR
-npm run build    # Build for production
+npm run build    # Build for production with static page generation
 npm run preview  # Preview production build locally
 npm run lint     # Run ESLint
 npm run deploy   # Build and deploy to GitHub Pages

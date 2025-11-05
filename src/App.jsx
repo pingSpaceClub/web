@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { useEffect } from 'react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Privacy from './pages/Privacy';
@@ -7,6 +8,13 @@ import FAQ from './pages/FAQ';
 import { routes } from './constants/routes';
 
 function App() {
+    useEffect(() => {
+        // Handle initial route for SEO-generated pages
+        if (window.__INITIAL_ROUTE__ && window.location.pathname === '/web/') {
+            window.history.replaceState(null, '', `/web${window.__INITIAL_ROUTE__}`);
+        }
+    }, []);
+
     return (
         <Router basename='/web'>
             <Routes>
